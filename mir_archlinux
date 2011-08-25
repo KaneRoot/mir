@@ -16,10 +16,6 @@ function mir_archlinux()
 		--exclude='/kde-unstable' \
 		--exclude='/multilib-testing' \
 		--exclude='/community-testing' \
-		--exclude='/community-staging' \
-		--exclude='/testing' \
-		--exclude='/staging' \
-		--exclude='/pool' \
 		${source} \
 		"${target}"
 }
