@@ -15,10 +15,9 @@ lock='/tmp/mirrorsync.lck'
 bande_passante=1000 # kbps
 source="mirrors.kernel.org::${distribution}"
 
-
 # instructions
 
-. ./mir_${distribution} 2>/dev/null
+. ./mir_${distribution} 2>/dev/null 1>&2
 [ $? -ne 0 ] && echo "Pas de fichier ./mir_${distribution}" && exit 3 
 
 [ ! -d "${target}" ] && mkdir -p "${target}"
