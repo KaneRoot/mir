@@ -1,0 +1,20 @@
+function mir_archlinux()
+{
+	/usr/bin/rsync -rqtlH --safe-links --delete-after \
+		--delay-updates --bwlimit=$bande_passante \
+		--temp-dir="${tmp}" \
+		--exclude='*.links.tar.gz*' \
+		--exclude='/other' \
+		--exclude='/sources' \
+		--exclude='/iso' \
+		--exclude='/gnome-unstable' \
+		--exclude='/kde-unstable' \
+		--exclude='/multilib-testing' \
+		--exclude='/community-testing' \
+		--exclude='/community-staging' \
+		--exclude='/testing' \
+		--exclude='/staging' \
+		--exclude='/pool' \
+		${source} \
+		"${target}"
+}
