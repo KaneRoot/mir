@@ -1,0 +1,14 @@
+Projet : mir
+
+Permet de créer un dépôt pour la distribution que l'on souhaite facilement.
+
+Utilisation : 
+mir distribution [repertoire]
+
+
+HOW TO : ajouter une distribution
+créer un fichier mir_nomdeladistribution
+ajouter la fonction mir_nomdeladistribution
+
+vous pouvez prendre ensuite exemple sur le fichier mir_archlinux pour comment bien utiliser rsync pour votre distribution
+vous pouvez aller sur le site source en remplaçant :: par un / et de là vous décidez des répertoires à exclure de la syncronisation
