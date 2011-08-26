@@ -18,15 +18,15 @@ source="mirrors.kernel.org::${distribution}"
 
 # instructions
 
-. $conf_dir/mir_${distribution} 2>/dev/null 1>&2
-[ $? -ne 0 ] && echo "Pas de fichier ./mir_${distribution}" && exit 3 
-
 [ ! -d "${target}" ] && mkdir -p "${target}"
 [ ! -d "${tmp}" ] && mkdir -p "${tmp}"
 [ -f "${lock}" ] && exit 1
 touch "${lock}"
 trap "rm -f '${lock}'" EXIT INT TERM
 
-mir_${distribution}
+. $conf_dir/mir_${distribution} 2>/dev/null 1>&2
+[ $? -ne 0 ] && echo "Pas de fichier ./mir_${distribution}" && exit 3 
+
+do_update
 
 echo "Last sync was $(date -d @$(cat ${target}/lastsync))"

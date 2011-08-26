@@ -1,4 +1,4 @@
-function mir_exemple()
+function do_update()
 {
 	### var env à modifier au besoin ###
 	#	  source ; bande_passante	   #
